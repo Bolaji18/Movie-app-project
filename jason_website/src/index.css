@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: winter --default, night --prefersdark;
+}
+
+@custom-variant dark (&:where([data-theme=night], [data-theme=night] *));
+.james{
+    width:30%;
+    border:1px #222 solid;
+    padding: 12px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgb(91, 94, 92);
+    box-sizing: border-box;
+    height: auto;
+}
+.johnclass{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
