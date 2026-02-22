@@ -7,6 +7,7 @@ import PropsDestruct from "./components/propsdestruct";
 import ReactEvents from "./events";
 import ApiUse from "./components/apiuse";
 import Choice from "./components/Favourite";
+import Users from "./components/users";
 
 function Router1(){
     return(
@@ -19,7 +20,7 @@ function Router1(){
             <Link to="/props">Props Destructuring</Link>
             <Link to="/choice">Favourite Color</Link>
             <Link to="/api">API Use</Link>
-
+            <Link to="/users">Users</Link>
          </nav>
 
          <Routes>
@@ -30,6 +31,7 @@ function Router1(){
             <Route path="/props" element={<PropsDestruct/>}/>
             <Route path="/choice" element={<Choice/>}/>
             <Route path="/api" element={<ApiUse/>}/>
+            <Route path="/users" element={<Users/>}/>
          </Routes>
         </BrowserRouter>
     )
