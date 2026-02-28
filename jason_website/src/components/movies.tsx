@@ -31,7 +31,7 @@ export default function Movies(){
     const [modal, setModal] = useState<boolean>(false);
 
     useEffect(() => {
-        const fetchMovies = async () => {
+        const fetchMovies = async () => { 
             try{
                 const response = await fetch("https://gist.githubusercontent.com/saniyusuf/406b843afdfb9c6a86e25753fe2761f4/raw/075b6aaba5ee43554ecd55006e5d080a8acf08fe/Film.JSON");
                 if (!response.ok){
