@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
+import FetchUsers from "./fetchusers";
 interface User{
     id: number;
     name: string;
 }
+
+
 
 export default function Users() {
     const [users, setUsers] = useState<User[]>([]);
@@ -59,8 +62,11 @@ export default function Users() {
                     })
                 }
             </h3>
+            <FetchUsers />
+            
         </div>
     )
 
 
 }
+
