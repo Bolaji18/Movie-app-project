@@ -8,6 +8,7 @@ import ReactEvents from "./events";
 import ApiUse from "./components/apiuse";
 import Choice from "./components/Favourite";
 import Users from "./components/users";
+import PostData from "./components/postdata";
 
 function Router1(){
     return(
@@ -21,6 +22,7 @@ function Router1(){
             <Link to="/choice">Favourite Color</Link>
             <Link to="/api">API Use</Link>
             <Link to="/users">Users</Link>
+            <Link to="/postdata">Post Data</Link>
          </nav>
 
          <Routes>
@@ -32,6 +34,7 @@ function Router1(){
             <Route path="/choice" element={<Choice/>}/>
             <Route path="/api" element={<ApiUse/>}/>
             <Route path="/users" element={<Users/>}/>
+            <Route path="/postdata" element={<PostData/>}/>
          </Routes>
         </BrowserRouter>
     )
