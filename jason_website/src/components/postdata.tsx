@@ -1,7 +1,8 @@
 import React, {useState, ChangeEvent, FormEvent} from "react";
+import GetItems from "./getdata";
 
 interface UserProfile{
-    username: string;
+    name: string;
     details: string;
 }
 
@@ -29,7 +30,7 @@ interface UserProfile{
 const PostData:React.FC =() => {
 
     const [formData, setFormData] = useState<UserProfile>({
-        username:"",
+        name:"",
         details:""
     });
 
@@ -57,21 +58,22 @@ const PostData:React.FC =() => {
             }
           
         } catch (error) {
-            console.error("Error fetching user profile:", error);
+            console.error("Error posting user profile:", error);
         }
     }
 
     return(
+        <>
         <form onSubmit={handleSubmit}>
             <div>
-                <label htmlFor="username">Username:</label>
+                <label htmlFor="name">Name:</label>
                 <input
                     type="text"
-                    id="username"
-                    name="username"
-                    value={formData.username}
+                    id="name"
+                    name="name"
+                    value={formData.name}
                     onChange={handleChange}
-                    placeholder="Enter username"
+                    placeholder="Enter name"
                     required
                     className="input input-accent"
                 />
@@ -90,6 +92,8 @@ const PostData:React.FC =() => {
             </div>
             <button type="submit" className="btn btn-primary">Submit</button>
         </form>
+        <GetItems />
+        </>
     )
 }
 
